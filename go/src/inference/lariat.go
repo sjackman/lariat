@@ -1364,7 +1364,7 @@ func inferMolecules(positions [][]*Alignment) []*CandidateMolecule {
 	var currentMolecule *CandidateMolecule
 	for _, position_list := range positions {
 		for i := 0; i < len(position_list); i++ {
-			if i == 0 || (i > 0 && position_list[i].pos-position_list[i-1].pos > 50000) {
+			if i == 0 || (i > 0 && position_list[i].pos-position_list[i-1].pos > 5000) {
 				if i > 0 {
 					currentMolecule.stop = position_list[i-1].pos
 				}
